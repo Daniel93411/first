@@ -23,3 +23,13 @@ body {
   width: 100%;
   cursor: pointer;
 }
+
+.sidebar button:hover{
+  background-color: rgb(68, 68, 68)
+}
+
+.contact {
+  padding: 15px;
+  font-size: 0.9em
+  color: rgb(204, 204, 204)
+}

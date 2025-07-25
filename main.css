@@ -34,3 +34,8 @@ body {
   color: rgb(204, 204, 204)
 }
 
+.content {
+  padding: 15px;
+  flex-grow: 1;
+}
+

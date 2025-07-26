@@ -1,56 +1,158 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Study Hub</title>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="main.css">
-    </head> 
-    <body>
-        <div class="sidebar">
-            <button onclick="showSection('Introduction')">Introduction</button>
-            <button onclick="showSection('Studying')">Studying</button>
-            <button onclick="showSection('Procrastination')">Procrastination</button>
-            <button onclick="showSection('Last Tips')">Last Tips</button>
-            <div class="contact">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Study Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body class="bg-gray-100 font-roboto">
+    <div class="main-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://placehold.co/48x48/cccccc/333333?text=Profile" alt="Profile Picture" class="profile-pic">
+                <h3 class="text-lg font-bold">Your Name</h3>
+            </div>
+            <nav class="flex flex-col flex-grow">
+                <button class="nav-button active" data-page="introduction">Introduction</button>
+                <button class="nav-button" data-page="studying">Studying</button>
+                <button class="nav-button" data-page="procrastination">Procrastination</button>
+                <button class="nav-button" data-page="last-tips">Last tips</button>
+            </nav>
+            <footer class="footer">
+                <p>Contact</p>
                 <p>Phone: 0800 352 646</p>
-                <p>Email: studywithisaachydesforevercrrc@gmail.com</p>
-            </div>
-        </div>
+                <p>Email: PUT HERE AFTER REMEMBER!</p>
+            </footer>
+        </aside>
 
-        <div class="content">
-            <div id="Introduction" class="section active">
-                <h1>Welcome</h1>
-                <p>Welcome to your <strong>personal study hub</strong>, where I give you <strong>tips</strong> that help improve your learning outcomes!</p>
-                <p>On this website, you will get tips on how to study, avoid procrastination, and some extra tips </p>
-            </div>
-            
-            <div id="study" class="section">
-                <h1>Studying</h1>
-                <p>Let's be completely honest, most student's do not like studying. It feels tiring, boring and too  much to handle. Plus, we lack the motication.</p>
-                <p><strong>Here are some tips to make it easier and more engaging!</strong></p>
-                <p><strong>Make your environment your own ✨</strong><br>Having comfortable lighting, snacks, or even music in the background can help significantly with increasing motivation and helping you study.<br>Use colored sticky notes or highlighters to make your work look more pleasing, which increases motivation.<br>Turn it into a game by making it making quizzes</p>
-                <p><strong>Study Smarter, Not Longer 🗓️</strong><br>Use studying techniques like the Pomorodo Technique (Study 25 min, break 5 min).<br>Focus on understanding, not memorizing the content.</p>
-                <p><strong>Don't study alone</strong><br>oining study groups or pairing with a friend can be extremely helpful in studying! You can quiz each other on the content, or create a pretend competition on study streaks, or point!</p>
-            </div>
+        <main class="content-area">
+            <section id="introduction" class="content-section active">
+                <h1 class="text-center text-gray-800">Welcome</h1>
+                <div class="text-lg leading-relaxed text-gray-700">
+                    <p class="mb-4">Hi! 👋</p>
+                    <p class="mb-4">
+                        Welcome to your <span class="text-purple-600 font-semibold">personal study hub</span>, where I give you <span class="text-orange-500 font-semibold">tips</span> that help improve overall <span class="text-orange-500 font-semibold">learning outcomes</span>! I will also try to make studying for exams or tests more <span class="text-orange-500 font-semibold">enjoyable</span> rather than being a pain to do.
+                    </p>
+                    <p class="mb-4">
+                        I know most people struggle with studying or revising for long periods, and that is okay! We are all good and bad at some things.
+                    </p>
+                    <p class="mb-4">
+                        On this website, you will be provided with tips on how to study well, minimize procrastination, and some extra tips to ensure that you do your very best during assessments!
+                    </p>
+                    <p class="mb-4">
+                        Navigate this website using the clickable buttons on the left side of the screen.
+                    </p>
+                    <p class="text-right mt-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 inline-block text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </p>
+                </div>
+            </section>
 
-            <div id=:procrastination" class="section">
-                <h1>Procrastination</h1>
-                <p><strong>Procrastination</strong> is an effortless thing to fall into. You want to study, but at the same time, you don't!</p>
-                <p><strong>Here are some tips to minimize procrastination!</strong></p>
-                <p><strong>Break the I'll do it cycle 🔁</strong><br>Doing anything, even doing one question, can prevent procrastination. Starting is always the hardest part - momentum kicks in once you get going!</p>
-                <p><strong>Make it inconvenient</strong><br><strong>Make procrastinating difficult.</strong>You could put your phone across the room, or use website blockers that make it hard to do things other than your work!</p>
-                <p><strong>Talk to yourself 🗣️</strong><br><strong>Saying positive things</strong> to yourself can overcome the mental fog for studying!</p>
-            </div>
+            <section id="studying" class="content-section">
+                <h1 class="text-center text-gray-800">Studying</h1>
+                <div class="text-lg leading-relaxed text-gray-700">
+                    <p class="mb-4">
+                        Let's be completely honest, most students hate studying. It feels boring, tiring, and overwhelming. Plus, we lack the motivation!
+                    </p>
+                    <p class="mb-4 text-center font-bold">
+                        Here are some tips to make it easier and more engaging!
+                    </p>
+                    <p class="mb-4">
+                        <span class="font-bold">Make your study environment your own</span> ✨
+                        Having <span class="text-orange-500">comfortable lighting</span>, snacks, or even music in the background can help increase motivation and help you study.
+                        Use <span class="text-orange-500">colored sticky notes or highlighters</span> to make your work look more pleasing, which also increases motivation!
+                        <span class="text-orange-500">Turn it into a game by <span class="font-bold">making quizzes</span></span>.
+                    </p>
+                    <p class="mb-4">
+                        <span class="font-bold">Study Smarter, Not Longer</span> 🧠
+                        <span class="text-orange-500">Use studying techniques</span> like the Pomodoro Technique (study for 25 min, take a 5 min break).
+                        <span class="font-bold">Focus on understanding</span>, not memorizing the content.
+                    </p>
+                    <p class="mb-4">
+                        <span class="font-bold">Don't study alone</span> 👯
+                        <span class="text-orange-500">Joining study groups or pairing with a friend</span> can be extremely helpful with studying! You can quiz each other on the content, or create a pretend competition on study streaks, or points!
+                    </p>
+                </div>
+            </section>
 
-            <div id="last tips" class="section">
-                <h1>Last Tips</h1>
-                <p><strong>And finally, some Last Tips to make your studying adventure fun!</strong></p>
-                <p><strong>Set a deadline - even if it is fake 😦</strong><br><strong>Setting a timer</strong> or deadline can trick your brain into urgency.</p>
-                <p><strong>Change your location 📍</strong><br><strong>Having a new environment</strong> can help refresh your mindset before you lock in!</p>
-            </div>
-        
-    
-        </div>
-    </body>
+            <section id="procrastination" class="content-section">
+                <h1 class="text-center text-gray-800">Procrastination</h1>
+                <div class="text-lg leading-relaxed text-gray-700">
+                    <p class="mb-4">
+                        <span class="text-purple-600 font-semibold">Procrastination</span> is an effortless thing to fall into. You want to study, but at the same time, you don't!
+                    </p>
+                    <p class="mb-4 text-center font-bold">
+                        Here are some <span class="text-orange-500">tips</span> to minimize Procrastination!
+                    </p>
+                    <p class="mb-4">
+                        <span class="font-bold">Break the "I'll do it" cycle</span> 🔄
+                        <span class="text-orange-500">Doing anything, even doing one question</span>, can prevent procrastination. Starting is always the hardest part - momentum kicks in once you get going!
+                    </p>
+                    <p class="mb-4">
+                        <span class="font-bold">Make it inconvenient</span> 😡
+                        <span class="text-orange-500">Make procrastinating difficult</span>. You could put your phone across the room, or use website blockers that make it hard to do things other than your work!
+                    </p>
+                    <p class="mb-4">
+                        <span class="font-bold">Talk to yourself</span> 🗣️
+                        <span class="text-orange-500">Saying positive things</span> to yourself can overcome the mental fog for studying!
+                    </p>
+                </div>
+            </section>
+
+            <section id="last-tips" class="content-section">
+                <h1 class="text-center text-gray-800">Last Tips</h1>
+                <div class="text-lg leading-relaxed text-gray-700">
+                    <p class="mb-4 text-center">
+                        And finally, some last tips to make your studying adventure <span class="font-bold text-purple-600">fun</span>!
+                    </p>
+                    <p class="mb-4">
+                        <span class="font-bold">Set a deadline - even if it is <span class="text-orange-500">fake</span></span> 🤥
+                        <span class="text-orange-500">Setting a timer or deadline</span> can trick your brain into urgency.
+                    </p>
+                    <p class="mb-4">
+                        <span class="font-bold">Change your location</span> 📍
+                        Having a new environment can help refresh your mindset before you lock in!
+                    </p>
+                    <p class="mb-4">
+                        <span class="font-bold">Use a to-do list, but keep it short</span> 📝
+                        <span class="text-orange-500">Using a to-do list with only <span class="font-bold">three tasks</span></span> can make it less overwhelming to study.
+                    </p>
+                    <p class="mb-4 text-center">
+                        Just like that, you're now able to make studying enjoyable and (hopefully) pass your exams!
+                    </p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navButtons = document.querySelectorAll('.nav-button');
+            const contentSections = document.querySelectorAll('.content-section');
+
+            navButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetPage = button.dataset.page;
+
+                    navButtons.forEach(btn => btn.classList.remove('active'));
+                    contentSections.forEach(section => section.classList.remove('active'));
+
+                    button.classList.add('active');
+
+                    const activeSection = document.getElementById(targetPage);
+                    if (activeSection) {
+                        activeSection.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
 </html>
